@@ -1,0 +1,8 @@
+title New Note SPA
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+note over browser:
+Payload : {content: "Example", date: "2021-04-26T23:11:36.126Z"} 
+end note
+
+server-->browser: {"message":"note created"}
