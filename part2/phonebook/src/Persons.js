@@ -9,7 +9,7 @@ const Persons = ({persons, textFilter})=>{
                 else 
                     return person.name.includes(textFilter)
             })
-            .map(person => <p key={person.name} >{person.name} {person.number}</p>)
+            .map(person => <p key={person.id} >{person.name} {person.number}</p>)
             }
       </div>
     )
