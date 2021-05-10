@@ -1,4 +1,9 @@
-const Persons = ({persons, textFilter})=>{
+const Person = ({id,name, number, handleDelete}) =>{
+    return(<div>
+        <p>{name} {number} <button onClick={(e)=>{ handleDelete(id,name, e)}}>Delete</button></p>
+    </div>)
+}
+const Persons = ({persons, textFilter, handleDelete})=>{
     return (
         <div>
             {
@@ -9,7 +14,12 @@ const Persons = ({persons, textFilter})=>{
                 else 
                     return person.name.includes(textFilter)
             })
-            .map(person => <p key={person.id} >{person.name} {person.number}</p>)
+            .map(person => <Person 
+                                key={person.id} 
+                                id= {person.id}
+                                name={person.name} 
+                                number={person.number} 
+                                handleDelete= {handleDelete}/>)
             }
       </div>
     )
