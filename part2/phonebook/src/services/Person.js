@@ -12,8 +12,9 @@ export const createPerson = (person) =>{
 }
 
 export const deletePerson = (id) =>{
-    return axios.delete(`${URL}/${id}`)
-        .then (response => response.data)
+    const request = axios.delete(`${URL}/${id}`)
+    return request
+        
 }
 
 export const updatePerson = (id, person) =>{
